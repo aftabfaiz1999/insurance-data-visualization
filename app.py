@@ -9,6 +9,7 @@ import pandas as pd
 import plotly.express as px
 
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
+server = app.server
 
 Insurance = pd.read_csv('insurance.csv')
 sex_value=Insurance['sex'].value_counts()
