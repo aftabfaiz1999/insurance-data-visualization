@@ -76,7 +76,7 @@ app.layout = html.Div([
                         id='histogram1',
                         figure=px.histogram(
                     
-                            Insurance.age,color_discrete_sequence=['orange'],histnorm='percent',
+                            Insurance.age,color_discrete_sequence=['orange'],
                             title='Age',
                             template='plotly_dark'
                         )
@@ -88,7 +88,7 @@ app.layout = html.Div([
                         id='histogram2',
                         figure=px.histogram(
                     
-                            Insurance['age'],nbins=15,color=Insurance.sex,x='age',title='Age By Gender',color_discrete_sequence=['orange','violet'],histnorm='percent',
+                            Insurance['age'],nbins=15,color=Insurance.sex,x='age',title='Age By Gender',color_discrete_sequence=['orange','violet'],
                             
                             
                             template='plotly_dark'
@@ -101,7 +101,7 @@ app.layout = html.Div([
                         id='histogram3',
                         figure=px.histogram(
                     
-                            Insurance.children,color_discrete_sequence=['mediumvioletred'],title='Childrens',histnorm='percent',
+                            Insurance.children,color_discrete_sequence=['mediumvioletred'],title='Childrens',
                             
                             template='plotly_dark'
                         )
@@ -113,7 +113,7 @@ app.layout = html.Div([
                         id='histogram4',
                         figure=px.histogram(
                     
-                            Insurance['smoker'],color=Insurance['sex'],color_discrete_sequence=['mediumvioletred','green'],histnorm='percent',
+                            Insurance['smoker'],color=Insurance['sex'],color_discrete_sequence=['mediumvioletred','green'],
                             title='Smoker By Gender',
                             template='plotly_dark'
                         )
@@ -125,7 +125,7 @@ app.layout = html.Div([
                         id='histogram5',
                         figure=px.histogram(
                     
-                            Insurance['charges'],color=Insurance['sex'],animation_frame=Insurance['smoker'],color_discrete_sequence=['violet','honeydew'],histnorm='percent',
+                            Insurance['charges'],color=Insurance['sex'],animation_frame=Insurance['smoker'],color_discrete_sequence=['violet','honeydew'],
                             title='Charges For Smokers By Gender',
                             template='plotly_dark'
                         )
@@ -137,7 +137,7 @@ app.layout = html.Div([
                         id='histogram6',
                         figure=px.histogram(
                     
-                            Insurance['age'],color=Insurance['sex'],animation_frame=Insurance['smoker'],histnorm='percent',
+                            Insurance['age'],color=Insurance['sex'],animation_frame=Insurance['smoker'],
                             title='Age For Smoker By Gender',
                             template='plotly_dark'
                         )
